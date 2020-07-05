@@ -36,12 +36,16 @@
                 </div>
             </div>
         </div>
+
         {{-- <div class="grid-item col-lg-3 col-md-9 col-sm-12 col-xs-12 mb-3 d-lg-none d-md-none d-block px-0">
             <small class="gray-text"><b>Sponsored</b></small>
             <div class="text-center">
                 <img class="sponsored-img" src="/images/tiktok.png">
             </div>
         </div> --}}
+
+        <quote-list  > </quote-list>
+
         @foreach($quotes as $quote)
         <div id="quote{{ $quote->id }}" class="grid-item col-lg-3 col-md-9 col-11 mb-3 ml-lg-5 px-0">
             <div class="shareButtons-day d-none">
