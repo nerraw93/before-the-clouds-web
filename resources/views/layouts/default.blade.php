@@ -40,8 +40,18 @@
             </div>
         </div>
 
-        @yield('extra_scripts')
+        <script>
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                gutter: 50,
+                percentPosition: true,
+                horizontalOrder: true
+            });
+        </script>
 
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src=" {{ mix('js/app.js') }} "></script>
+
+        @yield('extra_scripts')
     </body>
 </html>

@@ -110,15 +110,7 @@
     {{-- </template> --}}
 
     @section('extra_scripts')
-        <script>
-            $('.grid').masonry({
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-sizer',
-                gutter: 50,
-                percentPosition: true,
-                horizontalOrder: true
-            });
-        </script>
+
 
     @endsection
 @endsection

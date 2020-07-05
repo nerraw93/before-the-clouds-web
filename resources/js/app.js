@@ -1,10 +1,9 @@
 require('./bootstrap');
 
+import QuotesList from './components/quotes.vue'
 
-Vue.component('quote-list', require('../js/components/quotes.vue'));
-
-new Vue({
-    el: '#app',
+const app = new  Vue({
+    components: { QuotesList },
 
     data() {
         return {
@@ -16,7 +15,6 @@ new Vue({
             selectedCategoryId: null
         }
     },
-
 
     methods: {
         switchTab: function(tab) {
@@ -86,4 +84,4 @@ new Vue({
             this.selectedCategoryId = categopryId
         }
     }
-});
+}).$mount('#app');

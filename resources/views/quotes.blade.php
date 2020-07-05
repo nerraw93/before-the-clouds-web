@@ -1,6 +1,11 @@
-<div v-if="activeTab === 'quotes'" class="col-10 px-0 background-container3" :class="{'col-10': sidebarOpen, 'col-11': !sidebarOpen}">
 
-    <div class="grid mr-0 ml-auto">
+    <quotes-list
+        v-if="activeTab === 'quotes'"
+        class=""
+        :class="{'col-10': sidebarOpen, 'col-11': !sidebarOpen}"
+        :quotes="{{ $quotes }}" style="background-color: blue" />
+
+    {{-- <div class="grid mr-0 ml-auto">
         <div class="grid-sizer col-lg-3 col-md-9 col-11"></div>
         <div class="grid-item col-lg-3 col-md-9 col-11 ml-lg-5 mt-lg-5 mt-md-2 mt-4 mb-3 px-0">
             <h1 class="text-lg-center text-md-center text-left title">Quotes</h1>
@@ -36,16 +41,12 @@
                 </div>
             </div>
         </div>
-
-        {{-- <div class="grid-item col-lg-3 col-md-9 col-sm-12 col-xs-12 mb-3 d-lg-none d-md-none d-block px-0">
+        <div class="grid-item col-lg-3 col-md-9 col-sm-12 col-xs-12 mb-3 d-lg-none d-md-none d-block px-0">
             <small class="gray-text"><b>Sponsored</b></small>
             <div class="text-center">
                 <img class="sponsored-img" src="/images/tiktok.png">
             </div>
-        </div> --}}
-
-        <quote-list  > </quote-list>
-
+        </div>
         @foreach($quotes as $quote)
         <div id="quote{{ $quote->id }}" class="grid-item col-lg-3 col-md-9 col-11 mb-3 ml-lg-5 px-0">
             <div class="shareButtons-day d-none">
@@ -74,5 +75,4 @@
             </div>
         </div>
         @endforeach
-    </div>
-</div>
+    </div> --}}
