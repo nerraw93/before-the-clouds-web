@@ -1,0 +1,353 @@
+// Variables
+@import '../variables';
+
+#app {
+    background-image:url('/images/BackgroundAsset.png');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+[v-cloak] { opacity:0; }
+
+.gray-text {
+    color: #c7c7c7;
+}
+
+.white-circle {
+    background: #FCFCFC;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0px;
+    margin-left: 190px;
+}
+
+// Navbar
+
+.desktop-navbar {
+    padding-left: 2rem;
+}
+
+.navbar {
+    border-bottom: 1px solid #E4E4E4;
+    height: 6em;
+    background-color: white;
+    .logo-img {
+        width: 120px;
+    }
+    .btn-filter {
+        margin-left: 1.5em;
+    }
+    .sidebar-toggle {
+        border-radius: 50%;
+        height: 50px;
+    }
+    .sidebar-toggle.active, .sidebar-toggle:hover {
+        background: #CCE7FF;
+    }
+    .filter-button {
+        background-color: #F0F0F0;
+        color: gray;
+    }
+    .apply-button {
+        background-color: #71F69D;
+        color: white;
+    }
+    .filter-button, .apply-button {
+        border-radius: 70px;
+        width: 122px;
+        font-size: 24px;
+        font-weight: 500;
+        border: none;
+        z-index: 1;
+    }
+    .filter-button:hover, .apply-button:hover {
+        color: white;
+        background-color: $hover-blue;
+    }
+    .filter-button:focus, .apply-button:focus, .sidebar-toggle:focus {
+        outline: none;
+    }
+    .filter {
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        font-weight: 700;
+        color: gray;
+    }
+    .filter.active {
+        border-bottom: 4px solid $hover-blue;
+    }
+    .filter:focus, .categories-btn:focus {
+        outline: none;
+    }
+    button:disabled, button[disabled]:hover {
+        background-color: #cccccc;
+        color: #666666;
+    }
+    .categories-btn {
+        background: #0086FF;
+        color: white;
+        border-radius: 30px 0px 0px 30px;
+        width: 13rem;
+        font-size: 20px;
+        border: none;
+        z-index: 1;
+    }
+    .btn-secondary:focus {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .dropdown-menu {
+        margin-top: 18px;
+        border-radius: 12px;
+        background: #CCE7FF;
+        border: none;
+        min-width: 14rem !important;
+        .dropdown-item, label {
+            font-weight: 600;
+            font-size: 19px;
+            color: #5D5D5D;
+            cursor: pointer;
+            padding: 0;
+        }
+        .dropdown-item:hover, label:hover {
+            background: transparent;
+            color: #2185F6;
+        }
+        a:hover {
+            color: #2185F6;
+        }
+        input {
+            visibility: hidden;
+            position: absolute;
+        }
+        input[type="radio"]:checked+span {
+            color: #2185F6;
+        }
+    }
+}
+
+// sidebar
+
+#wrapper {
+    background: transparent;
+}
+
+#sidebar-wrapper {
+    .link.active, .link:hover {
+        background-color: #CCE7FF;
+        border-radius: 0px 30px 30px 0px;
+        cursor: pointer;
+        color: #0086FF;
+    }
+    span {
+        font-weight: 600;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    a:hover {
+        color: black;
+    }
+}
+
+// Modal
+
+.modal-backdrop {
+   background-color: transparent;
+}
+
+.modal-body {
+    .author {
+        font-size: 18px !important;
+    }
+    .fa-save,.fa-heart-o,.fa-share {
+        color: #0086FF;
+        font-size: 18px !important;
+    }
+    .fa-save:hover,.fa-heart-o:hover,.fa-share:hover {
+        color: white;
+    }
+}
+
+.close {
+    position: absolute;
+    top: -40%;
+    right: -46%;
+    background: #0086FF !important;
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    color: white;
+    opacity: 1 !important;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.close:focus {
+    outline: none;
+}
+
+.close:hover {
+    color: #0086FF;
+    background: white !important;
+}
+
+.modal-content  {
+    border: none;
+    -webkit-border-radius: 17px !important;
+    -moz-border-radius: 17px !important;
+    border-radius: 17px !important;
+}
+
+body.modal-open .background-container, .dropdown-open.background-container2, .sidebar-open.background-container3, .navbar.sidebar-open {
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
+    pointer-events:none;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+
+// Quotes
+
+.title {
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.quote-day-border {
+    border: 4px solid #0086FF;
+}
+
+.blue-box-bg {
+    background: #CCE7FF;
+    border-radius: 17px;
+    cursor: pointer;
+    .author {
+        color: gray;
+        font-weight: 600;
+        font-size: 13px;
+    }
+    .quote-day {
+        font-weight: 800;
+        color: #55585A;
+    }
+    p {
+        font-weight: 700;
+        color: #5E5E5E;
+        font-size: 20px;
+    }
+    .fa-save,.fa-heart-o,.fa-share {
+        color: #0086FF;
+        font-size: 25px;
+    }
+    .fa-save:hover,.fa-heart-o:hover,.fa-share:hover {
+        color: white;
+    }
+    .fa-heart {
+        color: red;
+        font-size: 25px;
+    }
+    .fa-calendar {
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        background-color: #0086FF;
+        width: 40px;
+        height: 39px;
+        border-radius: 50%;
+        padding-top: 9px;
+        margin-top: -4px;
+    }
+    button {
+        background: transparent;
+        border: none;
+    }
+    button:focus {
+        outline: 0;
+    }
+}
+
+// Videos
+
+.selected {
+    box-shadow: inset 0px 0px 30px 30px #0aa4ff;
+    border-radius: 17px;
+    .blue-box-bg {
+        filter: blur(15px);
+        pointer-events:none;
+    }
+    .shareButtons {
+        margin-top: 51px !important;
+    }
+    .shareButtons-day {
+        position: absolute;
+        z-index: 2;
+        padding-top: 7%;
+        margin-left: 26%;
+        .email, .copy {
+            color: white;
+            background-color: #0086FF;
+            border-radius: 50%;
+            padding-top: 5px;
+            padding-left: 9px;
+            border: none;
+            height: 85px;
+            width: 85px;
+            i {
+                font-size: 30px;
+            }
+            small {
+                font-size: 67%;
+            }
+        }
+        .email:focus,.copy:focus {
+            outline: 0;
+        }
+    }
+    .close-btn-day, .close-btn {
+        background-color: #0086FF;
+        color: white;
+        border: none;
+        border-radius: 21px;
+        margin-left: 11.5px;
+    }
+    .close-btn-day {
+        margin-top: 10px;
+    }
+    .close-btn {
+        margin-top: 4em;
+    }
+}
+.blue-box-bg {
+    .sample-img-day {
+        width: 100%;
+    }
+    .sample-img {
+        width: 100%;
+        border-radius: 17px 17px 0px 0px;
+    }
+}
+
+// Sponsored
+
+.sponsored-img {
+    border-radius: 17px;
+    width: 299px;
+}
+
+// Responsive
+@import 'responsive';
+
